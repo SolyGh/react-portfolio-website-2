@@ -1,0 +1,83 @@
+header {
+  height: 100vh;
+  padding-top: 4rem;
+  overflow: hidden;
+}
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/**========= CTA call to action =========**/
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+/**=========header socials =========**/
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+  position: relative; /*/*/
+}
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 36rem;
+  margin-top: 1.5rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+/**=========scroll down =========**/
+.scroll__down {
+  position: absolute;
+  right: -2rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 100vh;
+  }
+}
+/**================== small phones ======= **/
+
+@media screen and (max-width: 600px) {
+  .scroll__down,
+  .header__socials {
+    display: none;
+  }
+  .me img {
+    width: 96%;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cta {
+    max-width: max-content;
+    display: flex;
+    gap: 1rem;
+  }
+}
